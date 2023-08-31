@@ -1,9 +1,9 @@
 const API_URL = "http://localhost:3000/Friends";
 
-$(document).ready(function () {
+$(function () {
     loadFriends();
 
-    $("#friendForm").submit(function (e) {
+    $("#friendForm").on("submit", function (e) {
         e.preventDefault();
         let friendId = $("#friendId").val();
         if (friendId) {
@@ -33,13 +33,13 @@ function loadFriends() {
 }
 
 function addFriend() {
-    const book = {
+    const friend = {
     firstName: $("#firstName").val(),
     lastName: $("#lastName").val()
     };
-    $.post(API_URL, book, function () {
+    $.post(API_URL, friend, function () {
         resetForm();
-        loadBooks();
+        loadFriends();
     });
 }
 
@@ -53,8 +53,9 @@ function editFriend(id) {
 
 function updateFriend(id) {
     const friend = {
-        title: $("#firstName").val(),
-        author: $("#lastName").val()
+        friendId: $("#friendId").val(),
+        firstName: $("#firstName").val(),
+        lastName: $("#lastName").val()
     };
     $.ajax({
         url: API_URL + "/" + id,

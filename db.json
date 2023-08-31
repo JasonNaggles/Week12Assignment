@@ -14,7 +14,12 @@
       "id": 3,
       "firstName": "Jason",
       "lastName": "Naggles"
-      
+    },
+    {
+      "friendId": "4",
+      "firstName": "Hugh",
+      "lastName": "Dows",
+      "id": 4
     }
   ]
 }
