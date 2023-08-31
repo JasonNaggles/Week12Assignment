@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends App</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Bootstrap CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="style.css"/>
 </head>
-<body class="container">
-    <div id="new-friend" class="jumbotron">
-        <h2>New Friend</h2>
-        <input type="text" id="new-friend-name" class="form-control"> <br>
-        <button id="create-new-friend" class="btn btn-success form-control">Create</button> 
-    </div>
-    <div id="app">
+<body>
+    <h2>New Friend Manager</h2>
+    <form id="friendForm">
+        <input type="hidden" id="friendId"/>
+        <div class="form group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required/>
+        </div>
+        <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required/>  
+        </div>
+        <button type="submit" class="btn btn-warning text-primary">Submit</button>
+    </form>
+</br>
 
-    </div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Table to display books -->
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody id="friendsTableBody">
+      <!-- Books will be loaded here using jQuery -->
+    </tbody>
+  </table> 
+    <!-- jQuery and Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="index.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

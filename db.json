@@ -1,0 +1,20 @@
+{
+  "Friends": [
+    {
+      "id": 1,
+      "firstName": "Rebecca",
+      "lastName": "Turner-Robertson"
+    },
+    {
+      "id": 2,
+      "firstName": "Katie",
+      "lastName": "Spragg"
+    },
+    {
+      "id": 3,
+      "firstName": "Jason",
+      "lastName": "Naggles"
+      
+    }
+  ]
+}
