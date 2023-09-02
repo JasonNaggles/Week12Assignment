@@ -1,25 +1,30 @@
 {
   "Friends": [
     {
-      "id": 1,
-      "firstName": "Rebecca",
-      "lastName": "Turner-Robertson"
-    },
-    {
-      "id": 2,
-      "firstName": "Katie",
-      "lastName": "Spragg"
-    },
-    {
-      "id": 3,
+      "friendId": "1",
       "firstName": "Jason",
-      "lastName": "Naggles"
+      "lastName": "Naggles",
+      "id": 1
     },
     {
-      "friendId": "4",
-      "firstName": "Nathan",
-      "lastName": "Lane",
+      "firstName": "Rebecca",
+      "lastName": "Turner-Robertson",
+      "id": 2
+    },
+    {
+      "firstName": "Nikki",
+      "lastName": "Rempkowski",
+      "id": 3
+    },
+    {
+      "firstName": "Katie",
+      "lastName": "Spragg",
       "id": 4
+    },
+    {
+      "firstName": "Elizabeth",
+      "lastName": "Parsons",
+      "id": 5
     }
   ]
 }

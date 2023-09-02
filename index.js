@@ -32,7 +32,7 @@ function loadFriends() {
     });
 }
 
-function addFriend() {
+function addFriend() { // Add a friend's first name and last name to the Friends App as well as to the db.json file.
     const friend = {
     firstName: $("#firstName").val(),
     lastName: $("#lastName").val()
@@ -43,7 +43,7 @@ function addFriend() {
     });
 }
 
-function editFriend(id) {
+function editFriend(id) { // Edit a friend's first name, last name, or both by the clicking the yellow edit button. Once a change is made, click the submit button. 
     $.get(API_URL + "/" + id, function (friend) {
         $("#friendId").val(friend.id);
         $("#firstName").val(friend.firstName);
@@ -51,7 +51,7 @@ function editFriend(id) {
     });
 }
 
-function updateFriend(id) {
+function updateFriend(id) { // Update a friend's first name, last name, or both after one click of the submit button.  The change is updated in the db.json file.
     const friend = {
         friendId: $("#friendId").val(),
         firstName: $("#firstName").val(),
@@ -68,7 +68,7 @@ function updateFriend(id) {
     });
 }
 
-function deleteFriend(id) {
+function deleteFriend(id) { //Delete a friend's first and last name as well as their ID by clicking the green delete button.
     $.ajax({
         url: API_URL + "/" + id,
         type: 'DELETE',
